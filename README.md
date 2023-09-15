@@ -20,7 +20,7 @@ To use serial data loading use
 ```
 ad9851.InitSerial(W_CLK,FQ_UD,RESET,DATA);
 ```
-if your project does not use parallel loading you must tie D0 and D1 to 5V through a 10kOhm resistor.
+NOTE: if your project does not use parallel loading you must tie D0 and D1 to 5V through a 10kOhm resistor.
 
 To use parallel loading define a port(Ex. PORTD) and use 
 
@@ -35,3 +35,5 @@ The following member functions are available
      powerDown(bool power);
      Load();
      Reset();
+
+NB:Run Load after setting frequency and phase.

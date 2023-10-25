@@ -15,12 +15,12 @@ In your code, create an object representing the DDS.
 ```
 AD9851 ad9851;
 ```
-To use serial data loading use
+To use serial data loading define your pins and use 
 
 ```
 ad9851.InitSerial(W_CLK,FQ_UD,RESET,DATA);
 ```
-NOTE: if your project does not use parallel loading you must tie D0 and D1 to 5V through a 10kOhm resistor.
+NOTE: The DDS starts in parallel mode according to the datasheet. if your project does not use parallel loading you must tie D0 and D1 to 5V through a 10kOhm resistor. otherwise initialize parallel loading first as follows.
 
 To use parallel loading define a port(Ex. PORTD) and use 
 
